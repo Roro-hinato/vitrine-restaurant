@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Le Beffroi — Brasserie & cuisine traditionnelle à Bellefontaine. Spécialités flamandes faites maison : flamiche au maroilles, carbonnade flamande, welsh, waterzooï." />
+<title>Le Beffroi — Brasserie traditionnelle du Nord</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a href="#top" class="nav__brand"><span class="dot"></span>Le Beffroi</a>
+  <nav class="nav__menu">
+    <a href="#about">Le Restaurant</a>
+    <a href="#menu">La Carte</a>
+    <a href="#gallery">Galerie</a>
+    <a href="#contact">Visite</a>
+  </nav>
+  <a href="tel:+33328734512" class="nav__cta">Réserver</a>
+  <button class="nav__burger" aria-label="Menu" id="burger">
+    <span></span><span></span>
+  </button>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero__media">
+    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2000&q=80" alt="Salle du restaurant Le Beffroi" />
+  </div>
+  <div class="wrap hero__inner">
+    <span class="hero__eyebrow"><span class="line"></span>Brasserie & Cuisine traditionnelle · depuis 2010</span>
+    <h1 class="hero__title">
+      <span class="word"><span>Le </span></span><span class="word word--em"><span>Beffroi</span></span>
+    </h1>
+    <p class="hero__sub">
+      <span>Bellefontaine</span><span class="pip"></span><span>Spécialités flamandes</span><span class="pip"></span><span>Cuisine maison</span>
+    </p>
+    <div class="hero__bottom">
+      <dl class="hero__meta">
+        <dt>Adresse</dt><dd>12, rue du Géant</dd>
+        <dt>Téléphone</dt><dd>03 28 73 45 12</dd>
+        <dt>Cuisine</dt><dd>Faite maison</dd>
+      </dl>
+      <a href="#about" class="hero__scroll">Découvrir <span class="arrow"></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about__grid">
+      <div class="about__text reveal">
+        <span class="eyebrow">La Maison</span>
+        <h2 class="section-title">Une table <em>généreuse</em><br/>au cœur des Flandres.</h2>
+        <p class="lead">
+          Au 12 rue du Géant, à deux pas de la grand-place, Le Beffroi vous accueille
+          dans un cadre chaleureux où chaque détail respire la convivialité du Nord.
+          Gérard, Bruno et leur équipe défendent une cuisine de terroir, faite maison,
+          qui change tous les deux mois au gré des produits et des saisons.
+        </p>
+        <p class="lead" style="margin-top:18px;">
+          Spécialités flamandes, viandes choisies, desserts gourmands : tout est pensé pour
+          que vous repartiez avec ce sourire qui ne trompe pas — celui d'un bon repas
+          partagé en famille ou entre amis.
+        </p>
+        <p class="about__sig">— Gérard &amp; Bruno<small>Vos hôtes</small></p>
+      </div>
+      <div class="about__media reveal reveal-delay-1">
+        <div class="about__badge"><strong>4.7<span style="font-size:.8rem; color:var(--ink-mute);">/5</span></strong>+ de 670 avis</div>
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80" alt="Détail d'une assiette au Beffroi" />
+      </div>
+    </div>
+
+    <ul class="about__features reveal">
+      <li><span class="num">100</span><span class="label">couverts</span></li>
+      <li><span class="num">2010</span><span class="label">depuis</span></li>
+      <li><span class="num">N°1</span><span class="label">à Bellefontaine</span></li>
+      <li><span class="num">100%</span><span class="label">fait maison</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ MENU ============ -->
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="menu__head reveal">
+      <div>
+        <span class="eyebrow">Notre Carte</span>
+        <h2 class="section-title">Recettes <em>du Nord</em>,<br/>servies avec le sourire.</h2>
+      </div>
+      <div class="price-note">
+        <strong>Carte renouvelée tous les 2 mois</strong><br/>
+        au gré des saisons et des arrivages.<br/>
+        Tous nos plats sont faits maison.
+      </div>
+    </div>
+
+    <div class="menu__tabs" role="tablist" id="menuTabs">
+      <button class="menu__tab is-active" data-target="entrees" role="tab">Entrées</button>
+      <button class="menu__tab" data-target="plats" role="tab">Plats</button>
+      <button class="menu__tab" data-target="desserts" role="tab">Desserts</button>
+      <button class="menu__tab" data-target="boissons" role="tab">Boissons</button>
+    </div>
+
+    <!-- Entrées -->
+    <div class="menu__panel is-active" id="entrees">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <h4>Flamiche au Maroilles<span class="tag">— signature</span></h4>
+          <span class="price">9,50 €</span>
+          <p class="desc">Tarte chaude au Maroilles AOP fermier, salade aux noix et vinaigrette à la chicorée.</p>
+        </li>
+        <li class="menu__item">
+          <h4>Croquettes de crevettes grises</h4>
+          <span class="price">10,00 €</span>
+          <p class="desc">Crevettes grises de la mer du Nord, panure dorée, persil frit et quartiers de citron.</p>
+        </li>
+        <li class="menu__item">
+          <h4>Salade Ch'ti</h4>
+          <span class="price">9,00 €</span>
+          <p class="desc">Pommes de terre Ratte, lardons fumés, dés de Maroilles tiède, œuf mollet et roquette.</p>
+        </li>
+        <li class="menu__item">
+          <h4>Soupe à l'oignon des Flandres</h4>
+          <span class="price">7,50 €</span>
+          <p class="desc">Oignons longuement compotés à la bière brune, croûton gratiné au Vieux-Lille.</p>
+        </li>
+        <li class="menu__item">
+          <h4>Tartine au Vieux-Lille</h4>
+          <span class="price">8,50 €</span>
+          <p class="desc">Pain de campagne grillé, Vieux-Lille fondant, miel de pays et noix concassées.</p>
+        </li>
+        <li class="menu__item">
+          <h4>Œufs en meurette à la Goudale</h4>
+          <span class="price">9,00 €</span>
+          <p class="desc">Œufs pochés, sauce à la bière blonde Goudale, lardons et champignons de Paris.</p>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Plats -->
+    <div class="menu__panel" id="plats">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <h4>Carbonnade Flamande<span class="tag">— signature</span></h4>
+          <span class="price">17,50 €</span>
+          <p class="desc">Bœuf mijoté 6 heures à la bière brune et au pain d'épices, frites maison et chicons braisés.</p>
+        </li>
+        <li class="menu__item">
+          <h4>Welsh complet</h4>
+          <span class="price">15,90 €</span>
+          <p class="desc">Pain de campagne, jambon, sauce cheddar et bière, œuf miroir, frites maison.</p>
+        </li>
+        <li class="menu__item">
+          <h4>Potjevleesch</h4>
+          <span class="price">17,00 €</span>
+          <p class="desc">Terrine traditionnelle de quatre viandes blanches en gelée, pommes de terre rissolées.</p>
+        </li>
+        <li class="menu__item">
+          <h4>Waterzooï de poulet</h4>
+          <span class="price">18,50 €</span>
+          <p class="desc">Suprême de poulet fermier, bouillon crémé aux légumes d'hiver et herbes du jardin.</p>
+        </li>
+        <li class="menu__item">
+          <h4>Aiguillettes de poulet au Maroilles</h4>
+          <span class="price">17,50 €</span>
+          <p class="desc">Aiguillettes poêlées, sauce onctueuse au Maroilles, tagliatelles fraîches.</p>
+        </li>
+        <li class="menu__item">
+          <h4>Moules-frites « marinière »</h4>
+          <span class="price">16,50 €</span>
+          <p class="desc">Moules de bouchot, vin blanc, échalotes et persil — frites fraîches à volonté.</p>
+        </li>
+        <li class="menu__item">
+          <h4>Souris d'agneau confite</h4>
+          <span class="price">21,00 €</span>
+          <p class="desc">Souris d'agneau confite 7h au thym, jus court et purée de pommes de terre à la truffe.</p>
+        </li>
+        <li class="menu__item">
+          <h4>Tartiflette du Nord</h4>
+          <span class="price">16,00 €</span>
+          <p class="desc">Pommes de terre, lardons, oignons, gratinée au Maroilles AOP — salade d'accompagnement.</p>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Desserts -->
+    <div class="menu__panel" id="desserts">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <h4>Merveilleux du Nord<span class="tag">— maison</span></h4>
+          <span class="price">7,50 €</span>
+          <p class="desc">Meringue, crème fouettée à la chicorée, copeaux de chocolat noir.</p>
+        </li>
+        <li class="menu__item">
+          <h4>Tarte au sucre à la vergeoise</h4>
+          <span class="price">6,90 €</span>
+          <p class="desc">Pâte briochée, vergeoise blonde caramélisée, beurre fermier — la tradition.</p>
+        </li>
+        <li class="menu__item">
+          <h4>Crème brûlée à la chicorée</h4>
+          <span class="price">7,00 €</span>
+          <p class="desc">Crème onctueuse parfumée à la chicorée du Nord, croûte de cassonade dorée.</p>
+        </li>
+        <li class="menu__item">
+          <h4>Gaufre liégeoise</h4>
+          <span class="price">6,50 €</span>
+          <p class="desc">Gaufre tiède au sucre perlé, glace vanille de Madagascar et chantilly maison.</p>
+        </li>
+        <li class="menu__item">
+          <h4>Mousse au spéculoos</h4>
+          <span class="price">6,90 €</span>
+          <p class="desc">Mousse aérienne, brisures de spéculoos, coulis de caramel beurre salé.</p>
+        </li>
+        <li class="menu__item">
+          <h4>Tarte au libouli</h4>
+          <span class="price">7,00 €</span>
+          <p class="desc">Pâte levée, crème pâtissière à la vanille, dorée au four — recette de grand-mère.</p>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Boissons -->
+    <div class="menu__panel" id="boissons">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <h4>Ch'ti Blonde · 33cl</h4><span class="price">4,50 €</span>
+          <p class="desc">Bière de garde du Nord, douce et fruitée, brassée à Bénifontaine.</p>
+        </li>
+        <li class="menu__item">
+          <h4>Goudale IPA · 33cl</h4><span class="price">5,00 €</span>
+          <p class="desc">India Pale Ale aux notes d'agrumes, refermentée en bouteille.</p>
+        </li>
+        <li class="menu__item">
+          <h4>Jenlain Ambrée · 33cl</h4><span class="price">4,80 €</span>
+          <p class="desc">La célèbre bière de garde ambrée, ronde et caramélisée.</p>
+        </li>
+        <li class="menu__item">
+          <h4>Genièvre de Houlle</h4><span class="price">6,50 €</span>
+          <p class="desc">Eau-de-vie traditionnelle des Flandres distillée par Persyn.</p>
+        </li>
+        <li class="menu__item">
+          <h4>Verre de vin (rouge / blanc)</h4><span class="price">à partir de 4,50 €</span>
+          <p class="desc">Sélection de vignerons indépendants — demandez la carte des vins.</p>
+        </li>
+        <li class="menu__item">
+          <h4>Café-chicorée</h4><span class="price">2,80 €</span>
+          <p class="desc">Mélange traditionnel du Nord, à servir noir ou avec un nuage de lait.</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="menu__formula reveal">
+      <div class="name"><small>Formule du midi</small>Le Déjeuner Flamand</div>
+      <p class="desc">Entrée + plat + dessert au choix sur l'ardoise du jour. Du jeudi au vendredi, midi.</p>
+      <div class="price-tag">19<sup>€</sup></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Galerie</span>
+      <h2 class="section-title">L'<em>atmosphère</em> de la maison.</h2>
+    </div>
+
+    <div class="gallery__grid">
+      <figure class="gallery__item gallery__item--a reveal">
+        <img src="https://images.unsplash.com/photo-1592861956120-e524fc739696?auto=format&fit=crop&w=1400&q=80" alt="Intérieur du restaurant" />
+        <figcaption class="cap">La salle, intime et chaleureuse</figcaption>
+      </figure>
+      <figure class="gallery__item gallery__item--b reveal reveal-delay-1">
+        <img src="https://images.unsplash.com/photo-1548869206-93b036288d7e?auto=format&fit=crop&w=900&q=80" alt="Carbonnade flamande" />
+        <figcaption class="cap">Carbonnade flamande</figcaption>
+      </figure>
+      <figure class="gallery__item gallery__item--c reveal reveal-delay-2">
+        <img src="https://images.unsplash.com/photo-1715249792920-bfe1a3b9d79e?auto=format&fit=crop&w=900&q=80" alt="Moules frites en cocotte" />
+        <figcaption class="cap">Moules-frites marinière</figcaption>
+      </figure>
+      <figure class="gallery__item gallery__item--d reveal">
+        <img src="https://images.pexels.com/photos/5677282/pexels-photo-5677282.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Crème brûlée" />
+        <figcaption class="cap">Crème brûlée à la chicorée</figcaption>
+      </figure>
+      <figure class="gallery__item gallery__item--e reveal reveal-delay-1">
+        <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=900&q=80" alt="Carte des vins" />
+        <figcaption class="cap">Cave & bières du Nord</figcaption>
+      </figure>
+      <figure class="gallery__item gallery__item--f reveal reveal-delay-2">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80" alt="Service à table" />
+        <figcaption class="cap">L'art de recevoir</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT / MAP ============ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Visite</span>
+      <h2 class="section-title">Venez nous <em>rencontrer</em>.</h2>
+      <p class="lead" style="color:#d7c5a3; max-width:60ch;">
+        Nous vous accueillons place de la Halle, au cœur de Bellefontaine.
+        Réservation conseillée, surtout les week-ends.
+      </p>
+    </div>
+
+    <div class="contact__grid">
+      <div class="contact__col reveal">
+        <h3>Informations pratiques</h3>
+        <div class="contact__info">
+          <dl>
+            <div class="row"><dt>Adresse</dt><dd>12, rue du Géant<br/>59490 Bellefontaine — France</dd></div>
+            <div class="row"><dt>Téléphone</dt><dd><a href="tel:+33328734512">03 28 73 45 12</a></dd></div>
+            <div class="row"><dt>Email</dt><dd><a href="mailto:contact@lebeffroi.fr">contact@lebeffroi.fr</a></dd></div>
+            <div class="row"><dt>Capacité</dt><dd>100 couverts · groupes bienvenus</dd></div>
+            <div class="row"><dt>Services</dt><dd>Terrasse · climatisation · parking · accès PMR · animaux acceptés · livraison</dd></div>
+          </dl>
+        </div>
+
+        <ul class="hours">
+          <li><span class="day">Lundi</span><span class="time">12h — 14h</span></li>
+          <li class="closed"><span class="day">Mardi</span><span class="time">Fermé</span></li>
+          <li class="closed"><span class="day">Mercredi</span><span class="time">Fermé</span></li>
+          <li><span class="day">Jeudi</span><span class="time">12h — 15h · 19h — 22h</span></li>
+          <li><span class="day">Vendredi</span><span class="time">12h — 15h · 19h — 22h</span></li>
+          <li><span class="day">Samedi</span><span class="time">12h — 15h · 19h — 22h</span></li>
+          <li><span class="day">Dimanche</span><span class="time">12h — 15h · 19h — 22h</span></li>
+        </ul>
+
+        <div class="contact__cta">
+          <a href="tel:+33328734512" class="btn btn--primary">Réserver une table</a>
+          <a href="https://maps.google.com/?q=12+Rue+du+Géant,+59490+Bellefontaine" target="_blank" rel="noopener" class="btn btn--ghost">Itinéraire</a>
+        </div>
+      </div>
+
+      <div class="contact__col reveal reveal-delay-1">
+        <h3>Nous trouver</h3>
+        <div class="map">
+          <div class="map__pin"><span class="dot"></span> Le Beffroi · 12 rue du Géant</div>
+          <iframe
+            src="https://www.google.com/maps?q=12+Rue+du+Géant,+59490+Bellefontaine,+France&z=14&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Plan d'accès au Beffroi, Bellefontaine"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot__grid">
+      <div>
+        <div class="foot__brand">Le Beffroi</div>
+        <p class="foot__tag">Brasserie & cuisine traditionnelle, au cœur des Flandres françaises. Cuisine maison, gourmande et locale.</p>
+      </div>
+      <div>
+        <h5>Adresse</h5>
+        <ul>
+          <li>12, rue du Géant</li>
+          <li>59490 Bellefontaine</li>
+          <li>France</li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:+33328734512">03 28 73 45 12</a></li>
+          <li><a href="mailto:contact@lebeffroi.fr">Nous écrire</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Naviguer</h5>
+        <ul>
+          <li><a href="#about">La Maison</a></li>
+          <li><a href="#menu">La Carte</a></li>
+          <li><a href="#gallery">Galerie</a></li>
+          <li><a href="#contact">Visite</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot__bottom">
+      <span>© 2026 Le Beffroi — Tous droits réservés.</span>
+      <span>Site portfolio · Bellefontaine, France</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Galerie en grand">
+  <button class="lightbox__close" id="lbClose" aria-label="Fermer">
+    <span></span><span></span>
+  </button>
+  <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" aria-label="Image précédente">
+    <span></span>
+  </button>
+  <button class="lightbox__nav lightbox__nav--next" id="lbNext" aria-label="Image suivante">
+    <span></span>
+  </button>
+  <figure class="lightbox__stage">
+    <img class="lightbox__img" id="lbImg" alt="" />
+    <figcaption class="lightbox__cap" id="lbCap"></figcaption>
+    <span class="lightbox__counter" id="lbCount"></span>
+  </figure>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
