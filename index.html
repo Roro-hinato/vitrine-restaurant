@@ -19,11 +19,12 @@
   <a href="#top" class="nav__brand"><span class="dot"></span>Le Beffroi</a>
   <nav class="nav__menu">
     <a href="#about">Le Restaurant</a>
+    <a href="#chefs">Les Chefs</a>
     <a href="#menu">La Carte</a>
     <a href="#gallery">Galerie</a>
     <a href="#contact">Visite</a>
   </nav>
-  <a href="tel:+33328734512" class="nav__cta">Réserver</a>
+  <button type="button" class="nav__cta" data-open-booking>Réserver</button>
   <button class="nav__burger" aria-label="Menu" id="burger">
     <span></span><span></span>
   </button>
@@ -47,6 +48,7 @@
         <dt>Adresse</dt><dd>12, rue du Géant</dd>
         <dt>Téléphone</dt><dd>03 28 73 45 12</dd>
         <dt>Cuisine</dt><dd>Faite maison</dd>
+        <dt>Statut</dt><dd><span class="status" id="heroStatus"><span class="status__dot"></span><span class="status__text">…</span></span></dd>
       </dl>
       <a href="#about" class="hero__scroll">Découvrir <span class="arrow"></span></a>
     </div>
@@ -79,12 +81,49 @@
       </div>
     </div>
 
-    <ul class="about__features reveal">
-      <li><span class="num">100</span><span class="label">couverts</span></li>
-      <li><span class="num">2010</span><span class="label">depuis</span></li>
-      <li><span class="num">N°1</span><span class="label">à Bellefontaine</span></li>
-      <li><span class="num">100%</span><span class="label">fait maison</span></li>
+    <ul class="about__features reveal" id="aboutFeatures">
+      <li><span class="num" data-target="100" data-suffix="">100</span><span class="label">couverts</span></li>
+      <li><span class="num" data-target="2010" data-from="1990">2010</span><span class="label">depuis</span></li>
+      <li><span class="num" data-target="1" data-prefix="N°">N°1</span><span class="label">à Bellefontaine</span></li>
+      <li><span class="num" data-target="100" data-suffix="%">100%</span><span class="label">fait maison</span></li>
     </ul>
+  </div>
+</section>
+
+<!-- ============ CHEF ============ -->
+<section class="chefs" id="chefs">
+  <div class="wrap">
+    <div class="chefs__grid">
+      <div class="chefs__media reveal">
+        <img src="https://images.pexels.com/photos/4252134/pexels-photo-4252134.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Le chef en cuisine au Beffroi" />
+        <div class="chefs__caption">
+          <span class="chefs__caption-name">Gérard &amp; Bruno</span>
+          <span class="chefs__caption-role">Chefs &amp; copropriétaires</span>
+        </div>
+      </div>
+      <div class="chefs__text reveal reveal-delay-1">
+        <span class="eyebrow">Les Chefs</span>
+        <h2 class="section-title">Deux <em>passionnés</em><br/>derrière les fourneaux.</h2>
+        <p class="lead">
+          Gérard, formé à Lille auprès des grandes maisons du Nord, et Bruno,
+          ancien second à Bruges, se sont rencontrés autour d'une même obsession :
+          rendre justice aux produits du terroir flamand. Pas de chichi, pas
+          d'esbroufe — du goût, du beurre fermier, du temps.
+        </p>
+        <blockquote class="chefs__quote">
+          <span class="chefs__quote-mark">«</span>
+          Une carbonnade, ça ne se précipite pas. Six heures de mijotage,
+          une bière brune choisie, et le pain d'épices au bon moment. C'est
+          dans ces gestes patients que la cuisine du Nord prend tout son sens.
+          <span class="chefs__quote-mark chefs__quote-mark--end">»</span>
+        </blockquote>
+        <ul class="chefs__list">
+          <li><span class="chefs__list-num">01</span>Approvisionnement quotidien chez les producteurs locaux</li>
+          <li><span class="chefs__list-num">02</span>Carte renouvelée tous les deux mois selon les saisons</li>
+          <li><span class="chefs__list-num">03</span>Tout est préparé maison, du pain aux desserts</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -103,7 +142,7 @@
       </div>
     </div>
 
-    <div class="menu__tabs" role="tablist" id="menuTabs">
+    <div class="menu__tabs" role="tablist">
       <button class="menu__tab is-active" data-target="entrees" role="tab">Entrées</button>
       <button class="menu__tab" data-target="plats" role="tab">Plats</button>
       <button class="menu__tab" data-target="desserts" role="tab">Desserts</button>
@@ -303,6 +342,73 @@
   </div>
 </section>
 
+<!-- ============ REVIEWS ============ -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="reviews__head reveal">
+      <div>
+        <span class="eyebrow">Ils en parlent</span>
+        <h2 class="section-title">Ce que disent <em>nos clients</em>.</h2>
+      </div>
+      <div class="reviews__score">
+        <div class="reviews__score-num">4.7<span>/5</span></div>
+        <div class="reviews__score-stars" aria-label="4,7 étoiles sur 5">★★★★★</div>
+        <div class="reviews__score-label">+ de 670 avis vérifiés</div>
+      </div>
+    </div>
+
+    <div class="reviews__grid">
+      <figure class="review reveal">
+        <div class="review__stars" aria-label="5 étoiles sur 5">★★★★★</div>
+        <blockquote class="review__quote">
+          La carbonnade flamande est tout simplement exceptionnelle —
+          la viande fond, la sauce a ce goût de bière brune et de pain d'épices
+          qu'on cherche partout sans jamais le trouver. On reviendra.
+        </blockquote>
+        <figcaption class="review__author">
+          <img class="review__avatar" src="https://i.pravatar.cc/120?img=47" alt="" loading="lazy" />
+          <div class="review__author-info">
+            <span class="review__name">Camille D.</span>
+            <span class="review__source">La Fourchette · il y a 3 semaines</span>
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure class="review reveal reveal-delay-1">
+        <div class="review__stars" aria-label="5 étoiles sur 5">★★★★★</div>
+        <blockquote class="review__quote">
+          Accueil impeccable de Gérard et Bruno, qui prennent le temps de
+          présenter chaque plat. Le potjevleesch nous a transportés en
+          Flandre. Adresse incontournable à Bellefontaine.
+        </blockquote>
+        <figcaption class="review__author">
+          <img class="review__avatar" src="https://i.pravatar.cc/120?img=68" alt="" loading="lazy" />
+          <div class="review__author-info">
+            <span class="review__name">Thierry M.</span>
+            <span class="review__source">Google · il y a 1 mois</span>
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure class="review reveal reveal-delay-2">
+        <div class="review__stars" aria-label="4 étoiles sur 5">★★★★<span class="review__star-half">★</span></div>
+        <blockquote class="review__quote">
+          La crème brûlée à la chicorée à elle seule vaut le déplacement.
+          Cadre chaleureux, service attentionné, prix très raisonnables
+          pour la qualité. Un vrai coup de cœur familial.
+        </blockquote>
+        <figcaption class="review__author">
+          <img class="review__avatar" src="https://i.pravatar.cc/120?img=44" alt="" loading="lazy" />
+          <div class="review__author-info">
+            <span class="review__name">Anne-Sophie L.</span>
+            <span class="review__source">TripAdvisor · il y a 2 mois</span>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
 <!-- ============ CONTACT / MAP ============ -->
 <section class="contact" id="contact">
   <div class="wrap">
@@ -328,6 +434,10 @@
           </dl>
         </div>
 
+        <div class="hours-status">
+          <span class="status status--lg" id="contactStatus"><span class="status__dot"></span><span class="status__text">…</span></span>
+        </div>
+
         <ul class="hours">
           <li><span class="day">Lundi</span><span class="time">12h — 14h</span></li>
           <li class="closed"><span class="day">Mardi</span><span class="time">Fermé</span></li>
@@ -339,7 +449,7 @@
         </ul>
 
         <div class="contact__cta">
-          <a href="tel:+33328734512" class="btn btn--primary">Réserver une table</a>
+          <button type="button" class="btn btn--primary" data-open-booking>Réserver une table</button>
           <a href="https://maps.google.com/?q=12+Rue+du+Géant,+59490+Bellefontaine" target="_blank" rel="noopener" class="btn btn--ghost">Itinéraire</a>
         </div>
       </div>
@@ -387,6 +497,7 @@
         <h5>Naviguer</h5>
         <ul>
           <li><a href="#about">La Maison</a></li>
+          <li><a href="#chefs">Les Chefs</a></li>
           <li><a href="#menu">La Carte</a></li>
           <li><a href="#gallery">Galerie</a></li>
           <li><a href="#contact">Visite</a></li>
@@ -399,6 +510,79 @@
     </div>
   </div>
 </footer>
+
+<!-- ============ BOOKING MODAL ============ -->
+<div class="booking" id="booking" aria-hidden="true" role="dialog" aria-label="Réservation">
+  <div class="booking__panel">
+    <button class="booking__close" id="bookClose" aria-label="Fermer">
+      <span></span><span></span>
+    </button>
+    <div class="booking__head">
+      <span class="eyebrow">Réservation</span>
+      <h3 class="booking__title">Réserver une <em>table</em></h3>
+      <p class="booking__intro">Indiquez vos préférences, nous confirmons sous 24h.</p>
+    </div>
+
+    <form class="booking__form" id="bookForm" novalidate>
+      <div class="booking__row">
+        <label class="booking__field">
+          <span>Nom complet</span>
+          <input type="text" name="name" required autocomplete="name" placeholder="Camille Dupont" />
+        </label>
+        <label class="booking__field">
+          <span>Téléphone</span>
+          <input type="tel" name="phone" required autocomplete="tel" placeholder="06 12 34 56 78" />
+        </label>
+      </div>
+      <label class="booking__field">
+        <span>Email</span>
+        <input type="email" name="email" required autocomplete="email" placeholder="vous@email.fr" />
+      </label>
+      <div class="booking__row">
+        <label class="booking__field">
+          <span>Date</span>
+          <input type="date" name="date" id="bookDate" required />
+        </label>
+        <label class="booking__field">
+          <span>Heure</span>
+          <select name="time" required>
+            <option value="">— choisir —</option>
+            <optgroup label="Déjeuner">
+              <option>12:00</option><option>12:30</option><option>13:00</option><option>13:30</option><option>14:00</option>
+            </optgroup>
+            <optgroup label="Dîner">
+              <option>19:00</option><option>19:30</option><option>20:00</option><option>20:30</option><option>21:00</option><option>21:30</option>
+            </optgroup>
+          </select>
+        </label>
+        <label class="booking__field">
+          <span>Personnes</span>
+          <select name="guests" required>
+            <option>1</option><option selected>2</option><option>3</option><option>4</option>
+            <option>5</option><option>6</option><option>7</option><option>8</option>
+            <option>+9 (groupe)</option>
+          </select>
+        </label>
+      </div>
+      <label class="booking__field">
+        <span>Demande particulière (optionnel)</span>
+        <textarea name="notes" rows="3" placeholder="Allergies, occasion spéciale, table en terrasse…"></textarea>
+      </label>
+
+      <div class="booking__actions">
+        <button type="submit" class="btn btn--primary booking__submit">Envoyer la demande</button>
+        <p class="booking__note">Réponse de l'équipe sous 24h ouvrées.</p>
+      </div>
+    </form>
+
+    <div class="booking__success" id="bookSuccess" aria-hidden="true">
+      <div class="booking__success-icon">✓</div>
+      <h4>Demande envoyée !</h4>
+      <p>Nous revenons vers vous très vite par téléphone ou email pour confirmer votre table. Merci de votre confiance.</p>
+      <button type="button" class="btn btn--primary" id="bookSuccessClose">Fermer</button>
+    </div>
+  </div>
+</div>
 
 <!-- ============ LIGHTBOX ============ -->
 <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Galerie en grand">
