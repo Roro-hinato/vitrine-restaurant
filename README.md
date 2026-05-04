@@ -35,21 +35,6 @@ Site vitrine fictif d'une brasserie traditionnelle du Nord de la France, réalis
 └── README.md        Ce fichier
 ```
 
-## 🚀 Mise en ligne sur GitHub Pages
-
-1. Créez un repo public sur GitHub (par exemple `le-beffroi`)
-2. Poussez ces fichiers à la racine
-3. Settings → Pages → Source : `Deploy from a branch` → Branche `main` / dossier `/ (root)`
-4. Attendez 1 à 2 minutes, votre site est en ligne sur `https://<votre-pseudo>.github.io/le-beffroi/`
-
-### Avant la mise en ligne
-
-Remplacez `https://votre-domaine.github.io/` par l'URL réelle de votre site dans :
-- `index.html` (balises `og:url`, `canonical`, JSON-LD)
-- `robots.txt`
-- `sitemap.xml`
-- `404.html` (le bouton retour fonctionne en relatif, pas besoin d'y toucher)
-
 ## 🛠️ Stack technique
 
 - **HTML5** sémantique
