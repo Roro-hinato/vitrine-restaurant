@@ -2,7 +2,7 @@
    LE BEFFROI — Brasserie traditionnelle, Bellefontaine
    Script
    ------------------------------------------------------------
-   1. Nav qui change d'état au scroll
+   1. Nav qui change d'état au scroll + tonalité adaptative
    2. Menu hamburger sur mobile
    3. Onglets de la carte (entrées / plats / desserts / boissons)
    4. Reveal au scroll via IntersectionObserver
@@ -11,6 +11,7 @@
    7. Compteurs animés (section About)
    8. Statut ouvert/fermé live (calculé selon les horaires)
    9. Modale de réservation (formulaire + validation + état succès)
+  10. Modale légale (mentions + confidentialité avec onglets)
    ============================================================ */
 
 (() => {
@@ -375,5 +376,47 @@
       bookSuccess.setAttribute('aria-hidden', 'true');
       bookDate.value = '';
     }, 400);
+  });
+
+  // ---------- 10. Modale légale (mentions + confidentialité) ----------
+  const legal      = document.getElementById('legal');
+  const legalClose = document.getElementById('legalClose');
+  const legalTabs  = document.querySelectorAll('.legal__tab');
+  const legalPanes = document.querySelectorAll('.legal__content');
+
+  const openLegal = (which = 'mentions') => {
+    legal.classList.add('is-open');
+    legal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('is-locked');
+    // Activate the right tab
+    legalTabs.forEach(t => t.classList.toggle('is-active', t.dataset.legal === which));
+    legalPanes.forEach(p => p.classList.toggle('is-active', p.id === 'legal-' + which));
+  };
+  const closeLegal = () => {
+    legal.classList.remove('is-open');
+    legal.setAttribute('aria-hidden', 'true');
+    if (!booking.classList.contains('is-open')) document.body.classList.remove('is-locked');
+  };
+
+  document.querySelectorAll('[data-open-legal]').forEach(a => {
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      const which = a.getAttribute('href') === '#privacy' ? 'privacy' : 'mentions';
+      openLegal(which);
+    });
+  });
+  legalClose.addEventListener('click', closeLegal);
+  legal.addEventListener('click', (e) => { if (e.target === legal) closeLegal(); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && legal.classList.contains('is-open')) closeLegal();
+  });
+
+  legalTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      legalTabs.forEach(t => t.classList.remove('is-active'));
+      legalPanes.forEach(p => p.classList.remove('is-active'));
+      tab.classList.add('is-active');
+      document.getElementById('legal-' + tab.dataset.legal).classList.add('is-active');
+    });
   });
 })();

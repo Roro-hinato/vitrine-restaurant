@@ -59,6 +59,39 @@ body {
   line-height: 1.55;
   overflow-x: hidden;
 }
+
+/* ---------- A11y: Skip link ---------- */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: var(--ink);
+  color: var(--bg-soft);
+  padding: 14px 22px;
+  z-index: 200;
+  font-family: var(--serif);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: .85rem;
+  transition: top .25s var(--ease);
+}
+.skip-link:focus {
+  top: 8px;
+  left: 8px;
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ---------- A11y: Visible focus ring ---------- */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+.btn:focus-visible,
+.nav__cta:focus-visible {
+  outline-offset: 4px;
+}
 body::before {
   content: "";
   position: fixed; inset: 0;
@@ -1305,6 +1338,138 @@ body.is-locked { overflow: hidden; }
   margin-inline: auto;
 }
 .booking__form.is-hidden { display: none; }
+
+/* ---------- 11.10 Legal modal ---------- */
+.legal {
+  position: fixed; inset: 0;
+  z-index: 110;
+  display: flex; align-items: center; justify-content: center;
+  padding: clamp(16px, 4vw, 40px);
+  background: rgba(10, 7, 5, 0);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  opacity: 0; visibility: hidden;
+  transition: opacity .35s var(--ease), visibility 0s .35s, background .35s var(--ease), backdrop-filter .35s var(--ease);
+}
+.legal.is-open {
+  opacity: 1; visibility: visible;
+  background: rgba(10, 7, 5, .82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: opacity .35s var(--ease), visibility 0s, background .35s var(--ease), backdrop-filter .35s var(--ease);
+}
+.legal__panel {
+  background: var(--bg-soft);
+  width: 100%;
+  max-width: 720px;
+  max-height: 88vh;
+  overflow-y: auto;
+  padding: clamp(28px, 4vw, 48px);
+  position: relative;
+  transform: translateY(40px) scale(.97);
+  opacity: 0;
+  transition: transform .5s var(--ease), opacity .35s var(--ease);
+  border-top: 3px solid var(--accent);
+}
+.legal.is-open .legal__panel {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+.legal__close {
+  position: absolute;
+  top: 18px; right: 18px;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--ink);
+  cursor: pointer;
+  transition: background .25s var(--ease), transform .25s var(--ease);
+}
+.legal__close:hover { background: var(--bg-deep); transform: rotate(90deg); }
+.legal__close span {
+  position: absolute;
+  width: 18px; height: 1.5px;
+  background: currentColor;
+}
+.legal__close span:nth-child(1) { transform: rotate(45deg); }
+.legal__close span:nth-child(2) { transform: rotate(-45deg); }
+
+.legal__tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--line);
+  margin: 0 0 28px;
+  padding-right: 50px;
+  flex-wrap: wrap;
+}
+.legal__tab {
+  padding: 12px 18px;
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--ink-mute);
+  position: relative;
+  transition: color .25s var(--ease);
+  font-variation-settings: "SOFT" 80;
+}
+.legal__tab::after {
+  content: "";
+  position: absolute; left: 0; right: 0; bottom: -1px;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .35s var(--ease);
+}
+.legal__tab:hover { color: var(--ink); }
+.legal__tab.is-active { color: var(--accent); }
+.legal__tab.is-active::after { transform: scaleX(1); }
+
+.legal__content { display: none; animation: panelIn .4s var(--ease); }
+.legal__content.is-active { display: block; }
+.legal__content h3 {
+  font-family: var(--display);
+  font-size: clamp(1.6rem, 2.6vw, 2.2rem);
+  font-variation-settings: "SOFT" 30;
+  margin-bottom: 10px;
+}
+.legal__content h4 {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 1.15rem;
+  font-variation-settings: "SOFT" 60;
+  color: var(--accent);
+  margin-top: 22px;
+  margin-bottom: 8px;
+}
+.legal__content p {
+  color: var(--ink-soft);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 4px;
+}
+.legal__content a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color .2s var(--ease);
+}
+.legal__content a:hover { color: var(--accent-deep); }
+.legal__content em { color: var(--ink-mute); }
+
+/* ---------- 11.11 Footer legal links ---------- */
+.foot__legal {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-style: italic;
+}
+.foot__legal a {
+  transition: color .25s var(--ease);
+}
+.foot__legal a:hover { color: #ecc28a; }
+.foot__legal span { opacity: .4; }
 
 /* ---------- 12. Reveal au scroll ---------- */
 .reveal {

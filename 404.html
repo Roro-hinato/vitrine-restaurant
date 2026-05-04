@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Page introuvable — Le Beffroi</title>
+<meta name="description" content="Cette page n'existe pas. Retournez à l'accueil de Le Beffroi." />
+<meta name="robots" content="noindex, follow" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23f3ecdf'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia, serif' font-size='44' font-style='italic' font-weight='600' fill='%239d3d20'%3EB%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg: #f3ecdf; --bg-soft: #fbf6ec; --ink: #1f1812;
+  --ink-soft: #4b3f33; --ink-mute: #8a7b6a; --accent: #9d3d20;
+  --display: "Fraunces", ui-serif, Georgia, serif;
+  --serif: "Cormorant Garamond", ui-serif, Georgia, serif;
+}
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--serif);
+  min-height: 100vh; min-height: 100svh;
+  display: flex; align-items: center; justify-content: center;
+  padding: 40px 24px;
+  text-align: center;
+}
+.wrap { max-width: 560px; }
+.code {
+  font-family: var(--display);
+  font-size: clamp(8rem, 22vw, 16rem);
+  font-style: italic;
+  font-variation-settings: "SOFT" 100;
+  font-weight: 300;
+  color: var(--accent);
+  line-height: .9;
+  letter-spacing: -0.04em;
+  margin-bottom: 16px;
+}
+h1 {
+  font-family: var(--display);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-variation-settings: "SOFT" 30;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+h1 em { font-style: italic; color: var(--accent); }
+p {
+  color: var(--ink-soft);
+  font-size: 1.15rem;
+  line-height: 1.55;
+  margin-bottom: 32px;
+  font-style: italic;
+}
+a.btn {
+  display: inline-block;
+  padding: 16px 32px;
+  background: var(--accent);
+  color: var(--bg-soft);
+  text-decoration: none;
+  font-family: var(--serif);
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  font-size: .85rem;
+  border: 1px solid var(--accent);
+  transition: transform .3s ease, background .3s ease;
+}
+a.btn:hover { transform: translateY(-2px); background: #7a2e18; }
+.brand {
+  margin-top: 50px;
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 1.2rem;
+  font-variation-settings: "SOFT" 80;
+  color: var(--ink-mute);
+}
+.brand .dot {
+  display: inline-block;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  margin-right: 8px;
+  vertical-align: middle;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="code">404</div>
+  <h1>Cette page s'est <em>égarée</em>.</h1>
+  <p>La page que vous cherchez n'existe pas, ou n'est plus disponible. Retournez à l'accueil pour découvrir notre maison et notre carte.</p>
+  <a href="/" class="btn">Retour à l'accueil</a>
+  <div class="brand"><span class="dot"></span>Le Beffroi</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://roro-hinato.github.io/vitrine-restaurant/sitemap.xml

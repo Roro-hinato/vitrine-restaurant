@@ -3,16 +3,83 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Le Beffroi — Brasserie & cuisine traditionnelle à Bellefontaine. Spécialités flamandes faites maison : flamiche au maroilles, carbonnade flamande, welsh, waterzooï." />
-<title>Le Beffroi — Brasserie traditionnelle du Nord</title>
 
+<!-- Primary SEO -->
+<title>Le Beffroi — Brasserie traditionnelle à Bellefontaine | Spécialités flamandes</title>
+<meta name="description" content="Le Beffroi — Brasserie & cuisine traditionnelle à Bellefontaine. Spécialités flamandes faites maison : flamiche au maroilles, carbonnade flamande, welsh, waterzooï. Réservez votre table." />
+<meta name="keywords" content="restaurant Bellefontaine, brasserie flamande, carbonnade flamande, flamiche maroilles, welsh, potjevleesch, cuisine du Nord, restaurant traditionnel" />
+<meta name="author" content="Le Beffroi" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#9d3d20" />
+<link rel="canonical" href="https://roro-hinato.github.io/vitrine-restaurant/" />
+
+<!-- Open Graph (Facebook, WhatsApp, LinkedIn, iMessage) -->
+<meta property="og:type" content="restaurant" />
+<meta property="og:locale" content="fr_FR" />
+<meta property="og:site_name" content="Le Beffroi" />
+<meta property="og:title" content="Le Beffroi — Brasserie traditionnelle à Bellefontaine" />
+<meta property="og:description" content="Brasserie & cuisine traditionnelle. Spécialités flamandes faites maison, dans un cadre chaleureux au cœur de Bellefontaine." />
+<meta property="og:image" content="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Salle du restaurant Le Beffroi" />
+<meta property="og:url" content="https://roro-hinato.github.io/vitrine-restaurant/" />
+
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Le Beffroi — Brasserie traditionnelle" />
+<meta name="twitter:description" content="Spécialités flamandes faites maison à Bellefontaine. Carbonnade, welsh, flamiche au maroilles, crème brûlée à la chicorée." />
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80" />
+
+<!-- Favicon SVG inline (no external file needed) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23f3ecdf'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia, serif' font-size='44' font-style='italic' font-weight='600' fill='%239d3d20'%3EB%3C/text%3E%3C/svg%3E" />
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='28' fill='%23f3ecdf'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia, serif' font-size='124' font-style='italic' font-weight='600' fill='%239d3d20'%3EB%3C/text%3E%3C/svg%3E" />
+
+<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="styles.css">
+
+<!-- Schema.org Restaurant -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Le Beffroi",
+  "description": "Brasserie & cuisine traditionnelle. Spécialités flamandes faites maison.",
+  "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80",
+  "url": "https://roro-hinato.github.io/vitrine-restaurant/",
+  "telephone": "+33 3 28 XX XX XX",
+  "email": "contact@XXXXX.fr",
+  "priceRange": "€€",
+  "servesCuisine": ["Cuisine flamande", "Cuisine du Nord", "Cuisine française traditionnelle"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "12 rue du Géant",
+    "addressLocality": "Bellefontaine",
+    "postalCode": "59490",
+    "addressCountry": "FR"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Monday",   "opens": "12:00", "closes": "14:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Thursday","Friday","Saturday","Sunday"], "opens": "12:00", "closes": "15:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Thursday","Friday","Saturday","Sunday"], "opens": "19:00", "closes": "22:00" }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.7",
+    "reviewCount": "670",
+    "bestRating": "5"
+  },
+  "acceptsReservations": "True"
+}
+</script>
 </head>
 <body>
+
+<a class="skip-link" href="#main">Aller au contenu principal</a>
 
 <!-- ============ NAV ============ -->
 <header class="nav" id="nav">
@@ -30,10 +97,12 @@
   </button>
 </header>
 
+<main id="main">
+
 <!-- ============ HERO ============ -->
 <section class="hero" id="top">
   <div class="hero__media">
-    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2000&q=80" alt="Salle du restaurant Le Beffroi" />
+    <img loading="eager" fetchpriority="high" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2000&q=80" alt="Salle du restaurant Le Beffroi" />
   </div>
   <div class="wrap hero__inner">
     <span class="hero__eyebrow"><span class="line"></span>Brasserie & Cuisine traditionnelle · depuis 2010</span>
@@ -46,7 +115,7 @@
     <div class="hero__bottom">
       <dl class="hero__meta">
         <dt>Adresse</dt><dd>12, rue du Géant</dd>
-        <dt>Téléphone</dt><dd>03 28 73 45 12</dd>
+        <dt>Téléphone</dt><dd>03 28 XX XX XX</dd>
         <dt>Cuisine</dt><dd>Faite maison</dd>
         <dt>Statut</dt><dd><span class="status" id="heroStatus"><span class="status__dot"></span><span class="status__text">…</span></span></dd>
       </dl>
@@ -77,7 +146,7 @@
       </div>
       <div class="about__media reveal reveal-delay-1">
         <div class="about__badge"><strong>4.7<span style="font-size:.8rem; color:var(--ink-mute);">/5</span></strong>+ de 670 avis</div>
-        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80" alt="Détail d'une assiette au Beffroi" />
+        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80" alt="Détail d'une assiette au Beffroi" />
       </div>
     </div>
 
@@ -95,7 +164,7 @@
   <div class="wrap">
     <div class="chefs__grid">
       <div class="chefs__media reveal">
-        <img src="https://images.pexels.com/photos/4252134/pexels-photo-4252134.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Le chef en cuisine au Beffroi" />
+        <img loading="lazy" decoding="async" src="https://images.pexels.com/photos/4252134/pexels-photo-4252134.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Le chef en cuisine au Beffroi" />
         <div class="chefs__caption">
           <span class="chefs__caption-name">Gérard &amp; Bruno</span>
           <span class="chefs__caption-role">Chefs &amp; copropriétaires</span>
@@ -315,27 +384,27 @@
 
     <div class="gallery__grid">
       <figure class="gallery__item gallery__item--a reveal">
-        <img src="https://images.unsplash.com/photo-1592861956120-e524fc739696?auto=format&fit=crop&w=1400&q=80" alt="Intérieur du restaurant" />
+        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1592861956120-e524fc739696?auto=format&fit=crop&w=1400&q=80" alt="Intérieur du restaurant" />
         <figcaption class="cap">La salle, intime et chaleureuse</figcaption>
       </figure>
       <figure class="gallery__item gallery__item--b reveal reveal-delay-1">
-        <img src="https://images.unsplash.com/photo-1548869206-93b036288d7e?auto=format&fit=crop&w=900&q=80" alt="Carbonnade flamande" />
+        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1548869206-93b036288d7e?auto=format&fit=crop&w=900&q=80" alt="Carbonnade flamande" />
         <figcaption class="cap">Carbonnade flamande</figcaption>
       </figure>
       <figure class="gallery__item gallery__item--c reveal reveal-delay-2">
-        <img src="https://images.unsplash.com/photo-1715249792920-bfe1a3b9d79e?auto=format&fit=crop&w=900&q=80" alt="Moules frites en cocotte" />
+        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1715249792920-bfe1a3b9d79e?auto=format&fit=crop&w=900&q=80" alt="Moules frites en cocotte" />
         <figcaption class="cap">Moules-frites marinière</figcaption>
       </figure>
       <figure class="gallery__item gallery__item--d reveal">
-        <img src="https://images.pexels.com/photos/5677282/pexels-photo-5677282.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Crème brûlée" />
+        <img loading="lazy" decoding="async" src="https://images.pexels.com/photos/5677282/pexels-photo-5677282.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Crème brûlée" />
         <figcaption class="cap">Crème brûlée à la chicorée</figcaption>
       </figure>
       <figure class="gallery__item gallery__item--e reveal reveal-delay-1">
-        <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=900&q=80" alt="Carte des vins" />
+        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=900&q=80" alt="Carte des vins" />
         <figcaption class="cap">Cave & bières du Nord</figcaption>
       </figure>
       <figure class="gallery__item gallery__item--f reveal reveal-delay-2">
-        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80" alt="Service à table" />
+        <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80" alt="Service à table" />
         <figcaption class="cap">L'art de recevoir</figcaption>
       </figure>
     </div>
@@ -427,8 +496,8 @@
         <div class="contact__info">
           <dl>
             <div class="row"><dt>Adresse</dt><dd>12, rue du Géant<br/>59490 Bellefontaine — France</dd></div>
-            <div class="row"><dt>Téléphone</dt><dd><a href="tel:+33328734512">03 28 73 45 12</a></dd></div>
-            <div class="row"><dt>Email</dt><dd><a href="mailto:contact@lebeffroi.fr">contact@lebeffroi.fr</a></dd></div>
+            <div class="row"><dt>Téléphone</dt><dd><a href="tel:+33328000000">03 28 XX XX XX</a></dd></div>
+            <div class="row"><dt>Email</dt><dd><a href="mailto:contact@XXXXX.fr">contact@XXXXX.fr</a></dd></div>
             <div class="row"><dt>Capacité</dt><dd>100 couverts · groupes bienvenus</dd></div>
             <div class="row"><dt>Services</dt><dd>Terrasse · climatisation · parking · accès PMR · animaux acceptés · livraison</dd></div>
           </dl>
@@ -450,7 +519,7 @@
 
         <div class="contact__cta">
           <button type="button" class="btn btn--primary" data-open-booking>Réserver une table</button>
-          <a href="https://maps.google.com/?q=12+Rue+du+Géant,+59490+Bellefontaine" target="_blank" rel="noopener" class="btn btn--ghost">Itinéraire</a>
+          <a href="https://maps.google.com/?q=12+Rue+du+Géant,+59490+Bellefontaine" target="_blank" rel="noopener noreferrer" class="btn btn--ghost">Itinéraire</a>
         </div>
       </div>
 
@@ -469,6 +538,8 @@
     </div>
   </div>
 </section>
+
+</main>
 
 <!-- ============ FOOTER ============ -->
 <footer class="foot">
@@ -489,8 +560,8 @@
       <div>
         <h5>Contact</h5>
         <ul>
-          <li><a href="tel:+33328734512">03 28 73 45 12</a></li>
-          <li><a href="mailto:contact@lebeffroi.fr">Nous écrire</a></li>
+          <li><a href="tel:+33328000000">03 28 XX XX XX</a></li>
+          <li><a href="mailto:contact@XXXXX.fr">Nous écrire</a></li>
         </ul>
       </div>
       <div>
@@ -506,10 +577,63 @@
     </div>
     <div class="foot__bottom">
       <span>© 2026 Le Beffroi — Tous droits réservés.</span>
+      <nav class="foot__legal" aria-label="Liens légaux">
+        <a href="#legal" data-open-legal>Mentions légales</a>
+        <span aria-hidden="true">·</span>
+        <a href="#privacy" data-open-legal>Confidentialité</a>
+      </nav>
       <span>Site portfolio · Bellefontaine, France</span>
     </div>
   </div>
 </footer>
+
+<!-- ============ LEGAL MODAL ============ -->
+<div class="legal" id="legal" aria-hidden="true" role="dialog" aria-label="Mentions légales et confidentialité">
+  <div class="legal__panel">
+    <button class="legal__close" id="legalClose" aria-label="Fermer">
+      <span></span><span></span>
+    </button>
+
+    <div class="legal__tabs" role="tablist">
+      <button class="legal__tab is-active" data-legal="mentions" role="tab">Mentions légales</button>
+      <button class="legal__tab" data-legal="privacy" role="tab">Confidentialité</button>
+    </div>
+
+    <div class="legal__content is-active" id="legal-mentions">
+      <h3>Mentions légales</h3>
+      <p><em>Site portfolio fictif à but de démonstration. Le restaurant « Le Beffroi » et l'ensemble des informations présentées (adresse, téléphone, équipe, avis) sont entièrement fictifs.</em></p>
+
+      <h4>Éditeur du site</h4>
+      <p>Romain — Développeur Web Front End<br/>Site portfolio personnel, non commercial.</p>
+
+      <h4>Hébergement</h4>
+      <p>GitHub Pages — GitHub, Inc.<br/>88 Colin P Kelly Jr St, San Francisco, CA 94107, États-Unis</p>
+
+      <h4>Propriété intellectuelle</h4>
+      <p>L'ensemble des éléments graphiques, textes et code source de ce site sont la propriété de leur auteur, à l'exception des polices Google Fonts (Fraunces, Cormorant Garamond) et des images d'illustration provenant d'Unsplash et Pexels (licences libres).</p>
+
+      <h4>Crédits</h4>
+      <p>Photos : <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a> &amp; <a href="https://pexels.com" target="_blank" rel="noopener noreferrer">Pexels</a> · Avatars : <a href="https://pravatar.cc" target="_blank" rel="noopener noreferrer">Pravatar</a> · Cartographie : Google Maps · Polices : <a href="https://fonts.google.com" target="_blank" rel="noopener noreferrer">Google Fonts</a>.</p>
+    </div>
+
+    <div class="legal__content" id="legal-privacy">
+      <h3>Politique de confidentialité</h3>
+      <p><em>Dernière mise à jour : mai 2026.</em></p>
+
+      <h4>Collecte de données</h4>
+      <p>Ce site est un projet portfolio statique. Aucune donnée personnelle n'est collectée ni stockée à travers la navigation classique sur le site.</p>
+
+      <h4>Formulaire de réservation</h4>
+      <p>Le formulaire de réservation présent sur ce site est une démonstration : aucune donnée saisie n'est transmise, traitée ni conservée. Pour une vraie réservation, merci de contacter directement le restaurant.</p>
+
+      <h4>Cookies</h4>
+      <p>Aucun cookie de suivi ou de mesure d'audience n'est déposé. Les seuls services tiers chargés sont Google Fonts (rendu typographique), Google Maps (carte), Unsplash, Pexels et Pravatar (images), qui peuvent appliquer leurs propres politiques.</p>
+
+      <h4>Vos droits</h4>
+      <p>Conformément au RGPD, vous disposez des droits d'accès, de rectification et d'opposition. Pour toute question, vous pouvez nous écrire à <a href="mailto:contact@XXXXX.fr">contact@XXXXX.fr</a>.</p>
+    </div>
+  </div>
+</div>
 
 <!-- ============ BOOKING MODAL ============ -->
 <div class="booking" id="booking" aria-hidden="true" role="dialog" aria-label="Réservation">
@@ -596,7 +720,7 @@
     <span></span>
   </button>
   <figure class="lightbox__stage">
-    <img class="lightbox__img" id="lbImg" alt="" />
+    <img loading="lazy" decoding="async" class="lightbox__img" id="lbImg" alt="" />
     <figcaption class="lightbox__cap" id="lbCap"></figcaption>
     <span class="lightbox__counter" id="lbCount"></span>
   </figure>
