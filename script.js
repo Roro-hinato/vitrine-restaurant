@@ -14,11 +14,38 @@
    ============================================================ */
 
 (() => {
-  // ---------- 1. Nav scrolled state ----------
+  // ---------- 1. Nav scrolled state + tone matching ----------
   const nav = document.getElementById('nav');
-  const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 60);
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+  const tonedSections = Array.from(document.querySelectorAll('[data-nav-tone]'));
+
+  const updateNav = () => {
+    nav.classList.toggle('is-scrolled', window.scrollY > 60);
+
+    // Find the section currently sitting under the nav (just below its bottom edge)
+    const probeY = nav.getBoundingClientRect().bottom + 4;
+    let activeTone = null;
+    for (const sec of tonedSections) {
+      const r = sec.getBoundingClientRect();
+      if (r.top <= probeY && r.bottom > probeY) {
+        activeTone = sec.dataset.navTone;
+        break;
+      }
+    }
+    if (activeTone) nav.setAttribute('data-tone', activeTone);
+    else            nav.removeAttribute('data-tone');
+  };
+
+  // rAF throttle so it stays smooth even on long pages
+  let navTicking = false;
+  const onScrollNav = () => {
+    if (!navTicking) {
+      requestAnimationFrame(() => { updateNav(); navTicking = false; });
+      navTicking = true;
+    }
+  };
+  window.addEventListener('scroll', onScrollNav, { passive: true });
+  window.addEventListener('resize', onScrollNav, { passive: true });
+  updateNav();
 
   // ---------- 2. Mobile burger ----------
   const burger = document.getElementById('burger');
